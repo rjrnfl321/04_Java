@@ -203,6 +203,7 @@ public class ConditionEx {
 		System.out.println("성적 : " + result);
 
 	}
+
 	/**
 	 * [성적 판별기]
 	 * 
@@ -215,108 +216,156 @@ public class ConditionEx {
 	 * 
 	 * - 합산된 점수에 따라 성적 부여
 	 * 
-	 * 95점이상 : A+
-	 * 90점이상 : A
-	 * 85점이상 : B+
-	 * 80점이상 : B
-	 * 75점이상 : C+
-	 * 70점이상	: C
-	 * 65점이상 : D+
-	 * 60점이상 : D
-	 * 나머지 : F
+	 * 95점이상 : A+ 90점이상 : A 85점이상 : B+ 80점이상 : B 75점이상 : C+ 70점이상 : C 65점이상 : D+
+	 * 60점이상 : D 나머지 : F
 	 *
 	 *
 	 * [실행 화면] 이름 : 홍길동 중간고사 점수(40%) : 100 기말고사 점수(50%) : 80 과제 점수(10%) : 50
 	 * 
 	 * 최종 점수 : 85점 성적 : B+
 	 */
-	
-	
+
 	public void method6() {
 		System.out.println("이름 : ");
 		String name = sc.next();
-		
+
 		System.out.println("중간고사 점수(40%) :");
 		int a1 = sc.nextInt();
 		System.out.println("기말고사 점수(40%) :");
 		int a2 = sc.nextInt();
 		System.out.println("과제 점수(20%) :");
 		int a3 = sc.nextInt();
+
 		// 지역 변수 합계 생성
 		double sum = (a1 * 0.4 + a2 * 0.4 + a3 * 0.2);
 		String result;
-		if(sum >= 95) { result = "A+"; }
-		else if (sum >= 90) { result = "A"; }
-		else if (sum >= 85) { result = "B+"; }
-		else if (sum >= 80) { result = "B"; }
-		else if (sum >= 75) { result = "C+"; }
-		else if (sum >= 70) { result = "C"; }
-		else if (sum >= 65) { result = "D+"; }
-		else if (sum >= 65) { result = "D"; }
-		else result = "F";
-		
+		if (sum >= 95) {
+			result = "A+";
+		} else if (sum >= 90) {
+			result = "A";
+		} else if (sum >= 85) {
+			result = "B+";
+		} else if (sum >= 80) {
+			result = "B";
+		} else if (sum >= 75) {
+			result = "C+";
+		} else if (sum >= 70) {
+			result = "C";
+		} else if (sum >= 65) {
+			result = "D+";
+		} else if (sum >= 65) {
+			result = "D";
+		} else
+			result = "F";
+
 		System.out.println(name + "의 최종 점수 : " + sum);
-		
+
 		System.out.println("성적  : " + result);
-	
+
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	// 방법 1
+
+	// if(sum >= 95) {
+//		result = "A+";
+	// } else if(sum >= 90) {
+//		result = "A";
+	// } else if(sum >= 85) {
+//		result = "B+";
+	// } else if(sum >= 80) {
+//		result = "B";
+	// } else if(sum >= 75) {
+//		result = "C+";
+	// } else if(sum >= 70) {
+//		result = "C";
+	// } else if(sum >= 65) {
+//		result = "D+";
+	// } else if(sum >= 60) {
+//		result = "D";
+	// } else result = "F";
+
+	// 방법 2
+	/*
+	 * if(sum >= 90) result = "A" + ( sum>=95 ? "+" : "" ); else if(sum >= 80)
+	 * result = "B" + ( sum>=85 ? "+" : "" ); else if(sum >= 70) result = "C" + (
+	 * sum>=75 ? "+" : "" ); else if(sum >= 60) result = "D" + ( sum>=65 ? "+" : ""
+	 * ); else result = "F";
+	 */
+
+	// 방법 3
+	/*
+	 * switch( (int)sum/5 ) { case 20, 19 : result = "A+"; break; case 18 : result =
+	 * "A"; break; case 17 : result = "B+"; break; case 16 : result = "B"; break;
+	 * case 15 : result = "C+"; break; case 14 : result = "C"; break; case 13 :
+	 * result = "D+"; break; case 12 : result = "D"; break; default : result = "F";
+	 * }
+	 */
+
+	//
 	public void method7() {
 		System.out.println("이름 : ");
-		
-		
+		String name = sc.next();
+
 	}
-	
-	
 
-	
+	/**
+	 * [연습 문제] 국어, 영어, 수학, 사탐, 과탐 점수를 입력 받아 40점 미만 과목이 있으면 FAIL 평균이 60점 미만인 경우도 FAIL
+	 * 모든 과목 40점 이상, 평균 60점 이상인 경우 PASS
+	 * 
+	 * [출력 예시] 점수 입력(국 영 수 사 과) : 100 50 60 70 80
+	 * 
+	 * 
+	 * 1) 40점 미만 과목이 존재하는 경우 FAIL [40점 미만 과목 : 국어 영어]
+	 * 
+	 * 
+	 * 2) 평균 60점 미만인 경우 FAIL [점수 : 50.4 (평균 미달)]
+	 * 
+	 * 
+	 * 3) PASS인 경우 PASS [점수 : 83.4 / 100]
+	 */
+
+	public void practice() {
+		System.out.println("점수 입력 ( 국 영 수 사 과 ) : ");
+
+		int kor = sc.nextInt(); // 국
+		int eng = sc.nextInt(); // 영
+		int mat = sc.nextInt(); // 수
+		int soc = sc.nextInt(); // 사
+		int sci = sc.nextInt(); // 과
+
+		// 40점 미만인 과목 검사
+		boolean flag = false;
+
+		String str = ""; // 빈칸 ( 자료형 : String , 내용 X )
+		
+		if (kor < 40)
+			flag = true;
+			str += "국어";
+		if (eng < 40)
+			flag = true;
+			str += "영어";
+		if (mat < 40)
+			flag = true;
+			str += "수학";
+		if (soc < 40)
+			flag = true;
+			str += "과학";
+		if (sci < 40)
+			flag = true;
+			str += "국어";
+			
+		// 평균 (double형 결과를 반환 받기 위해 5.0으로 나눔)
+			
+		if(flag) {
+			System.out.printf("FAIL [40점 미만 과목 : %s]", str);
+			return;
+		}
+		double avg = (kor + eng + mat + soc + sci) / 5.0;
+		if (avg < 60.0) {
+			System.out.printf("FAIL [점수] : %.1f (평균 미달)]", avg);
+			return; // Early return; ( 중간에 메서드 종료)
+
+		}
+		System.out.printf("PASS [점수] : %.1f / 100 ", avg);
+	}
+
 }
-
-
-//방법 1
-
-//if(sum >= 95) {
-//	result = "A+";
-//} else if(sum >= 90) {
-//	result = "A";
-//} else if(sum >= 85) {
-//	result = "B+";
-//} else if(sum >= 80) {
-//	result = "B";
-//} else if(sum >= 75) {
-//	result = "C+";
-//} else if(sum >= 70) {
-//	result = "C";
-//} else if(sum >= 65) {
-//	result = "D+";
-//} else if(sum >= 60) {
-//	result = "D";
-//} else result = "F";
-
-//방법 2
-/*
-* if(sum >= 90) result = "A" + ( sum>=95 ? "+" : "" ); else if(sum >= 80)
-* result = "B" + ( sum>=85 ? "+" : "" ); else if(sum >= 70) result = "C" + (
-* sum>=75 ? "+" : "" ); else if(sum >= 60) result = "D" + ( sum>=65 ? "+" : ""
-* ); else result = "F";
-*/
-
-//방법 3
-/*
-* switch( (int)sum/5 ) { case 20, 19 : result = "A+"; break; case 18 : result =
-* "A"; break; case 17 : result = "B+"; break; case 16 : result = "B"; break;
-* case 15 : result = "C+"; break; case 14 : result = "C"; break; case 13 :
-* result = "D+"; break; case 12 : result = "D"; break; default : result = "F";
-* }
-*/
-
-//
