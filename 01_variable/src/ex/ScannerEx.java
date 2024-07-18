@@ -9,7 +9,7 @@ public class ScannerEx {
 		/*
 		 * Scanner 클래스
 		 * 
-		 * - 사용자로부터 입렵을 받기 위해 Java에서 제공하는 클래스
+		 * - 사용자로부터 입력을 받기 위해 Java에서 제공하는 클래스
 		 * 
 		 * - Java.util 패키지에 속해 있음
 		 */
