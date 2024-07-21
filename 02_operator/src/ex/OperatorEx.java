@@ -11,7 +11,7 @@ public class OperatorEx {
 	// OperatorRun에서
 	// 호출한 기능을 정의해놓는 클래스
 
-	// method == 객체(클래스) 가지고 있는 기능(fuction)
+	// method == 객체(클래스) 가지고 있는 기능(function)
 	public void test1() {
 		System.out.println("test1() 메서드 호출용");
 	}
