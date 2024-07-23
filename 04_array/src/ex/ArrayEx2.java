@@ -37,7 +37,7 @@ public class ArrayEx2 {
 		System.out.println("arr : " + Arrays.toString(arr));
 		System.out.println("copyArr : " + Arrays.toString(copyArr));
 		//  복사한 배열을 수정 했지만
-		// 원본도 같이 수정됨
+		//  원본도 같이 수정됨
 		// 	-> 얕은 복사는 주소만 복사해서
 		// 	   같은 배열을 참조하게 만들어 값을 공유함
 		
@@ -191,7 +191,7 @@ public class ArrayEx2 {
 		System.out.println(arr[1]); // 1차원 배열의 해시코드(주소)
 		
 		// arr[0]가 참조하는 객체/배열이 int[] 자료형인가?
-		System.out.println(arr[0] instanceof int[]); // ture
+		System.out.println(arr[0] instanceof int[]); // true
 		System.out.println("---------------------");
 		
 		// for문으로 모든 요소 출력하기 1 (일반 for문)
