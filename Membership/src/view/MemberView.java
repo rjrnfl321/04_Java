@@ -52,7 +52,7 @@ public class MemberView {
 				
 				case 2: selectAll();break;
 				
-				case 3: break;
+				case 3: selectName();break;
 				
 				case 4: break;
 				
@@ -82,6 +82,7 @@ public class MemberView {
 		} while (input != 0);
 		
 	}
+	  
 	
 	
 	
@@ -184,6 +185,25 @@ public class MemberView {
 		}
 		
 	}
+	
+	// --------------------------------------------------------------------------
+	
+	// [이름으로 검색 (동명이인)]
+	
+	private void selectName () throws IOException {
+		
+		// 검색할 이름 입력 받기
+		System.out.println("\n ----- 이름 검색 (동명이인 있으면 모두 조회) ----- \n");
+		System.out.println("검색할 이름 입력 : ");
+		
+		String serachName = br.readLine();
+		
+		// 이름 검색 서비스 호출 후 결과 반환 받기
+		// (서비스 작성 후 돌아올 예정)
+	}
+	
+	
+	
 	
 	
 }
