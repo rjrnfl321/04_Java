@@ -37,6 +37,7 @@ public interface MemberDao {
 	/** 
 	 * 파일 저장
 	 */
+	
 	void saveFile() throws IOException;
 	
 	
