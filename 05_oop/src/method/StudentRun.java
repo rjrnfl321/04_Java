@@ -9,6 +9,6 @@ public class StudentRun {
 		// StudentService 객체 생성
 		StudentService service = new StudentService();
 		
-		service.mainMenu();
+//		service.mainMenu();
 	}
 }

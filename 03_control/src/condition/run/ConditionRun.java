@@ -20,7 +20,7 @@ public class ConditionRun {
 //		ex.method5();
 //		ex.method6();
 //		ex.method7();
- 		ex.practice();
+// 		ex.practice();
 	}
 
 }

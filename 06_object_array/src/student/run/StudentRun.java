@@ -7,7 +7,7 @@ public class StudentRun {
 	public static void main(String[] args) {
 		
 		// studentview 객체 생성
-		StudentView view = new StudentView();
-		view.mainMenu();
+//		StudentView view = new StudentView();
+//		view.mainMenu();
 	}
 }

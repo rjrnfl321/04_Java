@@ -29,7 +29,7 @@ public class LoopRun {
 //		ex2.method5();
 //		ex2.method6();
 //		ex2.method7();
-		ex2.method8();
+//		ex2.method8();
 		
 		
 	

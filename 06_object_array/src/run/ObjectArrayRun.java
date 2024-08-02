@@ -10,7 +10,7 @@ public class ObjectArrayRun {
 		//  -> MemberService 생성자를 작성한 적 없다
 		// --> 그러면 컴파일러가 "기본 생성자"를 만들어 준다
 			
-		MemberService service = new MemberService();
-		service.method1();
+//		MemberService service = new MemberService();
+//		service.method1();
 	}
 }
