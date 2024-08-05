@@ -1,6 +1,6 @@
 package dto;
 
-import java.io.Serializable;
+import java.io.Serializable; 
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

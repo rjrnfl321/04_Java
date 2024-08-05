@@ -1,6 +1,6 @@
 package view;
 
-import java.io.BufferedReader;
+import java.io.BufferedReader; 
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
@@ -43,7 +43,7 @@ public class MemberView {
 		int input = 0;
 		do {
 			try {
-				// 메뉴 출력 후 입력된 번호를 받환 받기
+				// 메뉴 출력 후 입력된 번호를 반환 받기
 				input = selectMenu();
 				
 				// 선택된 메뉴 번호에 따라 case 선택
