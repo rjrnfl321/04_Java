@@ -20,15 +20,14 @@ public class TestRun2 {
 		
 		boolean isExist = false;
 		for(String name : set) {  /** 2번 원인 **/ 
-			if(name.equals(null)) { /** 3번 원인 **/
+			if(name.equals(input)) { /** 3번 원인 **/
 				isExist = true;
-				return;
+				break;
 			}
-			break;
 		}
 		
 		
-		if(!isExist) {
+		if(isExist) {
 			System.out.println("존재하는 회원입니다.");
 		} else {
 			System.out.println("존재하지 않는 회원입니다.");
