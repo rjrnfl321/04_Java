@@ -72,7 +72,7 @@ public class TestRun {
 		//   2) flag를 이용해 없음 구문 실행 여부를 처리
 		
 		
-		boolean flag = true;
+		boolean flag = true; 
 		
 		for(String menu : menuSet) {
 			if(menu.equals("라면")) {
